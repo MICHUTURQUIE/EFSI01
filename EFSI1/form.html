@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+<title> FORM PROMEDIOS </title> 
+<link rel = "stylesheet" href = "estilos.css" >
+
+</head>
+
+<body>
+
+ <style>
+
+  body {
+  background-image: url('img/fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+ }
+
+</style> 
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<form>
+    <div class="form-group">
+      <label for="InputMate">Ingresa tu nota de Matematica  </label>
+      <input type="number" required="required">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="InputLengua">Ingresa tu nota de Lengua  </label>
+      <input type="number" required="required">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="InputEFSI">Ingresa tu nota de EFSI  </label>
+        <input type="number" required="required">
+      </div>
+      <br>
+    <button type="submit" onclick="funciones/promedio()" class="btn btn-primary"> Calcular Promedio </button>
+    <button type="submit" onclick="funciones/notalta()" class="btn btn-primary" id="MasAlta"> Mostrar nota mas alta </button>
+  </form>
+
+
+</body>
+
+</html>
