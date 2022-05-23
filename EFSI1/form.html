@@ -2,45 +2,55 @@
 
 <head>
 
-<title> FORM PROMEDIOS </title> 
-<link rel = "stylesheet" href = "estilos.css" >
+  <title> FORM PROMEDIOS </title>
+  <link rel="stylesheet" href="estilos.css">
+  <script type="text/javascript" src="funciones.js"> </script>
 
 </head>
 
 <body>
 
- <style>
+  <style>
+    body {
+      background-image: url('img/fondo.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%, 100%;
+    }
+  </style>
 
-  body {
-  background-image: url('img/fondo.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%, 100%;
- }
+  <br><br><br><br><br><br><br><br><br><br>
 
-</style> 
-
-<br><br><br><br><br><br><br><br><br><br>
-
-<form>
+  <form>
     <div class="form-group">
-      <label for="InputMate">Ingresa tu nota de Matematica  </label>
-      <input type="number" required="required">
+      <label for="InputMate">Ingresa tu nota de Matematica </label>
+      <input type="text" id="Mate" name="Mate" required="required"
+        onkeyup="validarNumero(document.getElementById('Mate').value, 'Mate')">
     </div>
     <br>
     <div class="form-group">
-      <label for="InputLengua">Ingresa tu nota de Lengua  </label>
-      <input type="number" required="required">
+      <label for="InputLengua">Ingresa tu nota de Lengua </label>
+      <input type="text" id="Lengua" name="Lengua" required="required"
+        onkeyup="validarNumero(document.getElementById('Lengua').value, 'Lengua')">
     </div>
     <br>
     <div class="form-group">
-        <label for="InputEFSI">Ingresa tu nota de EFSI  </label>
-        <input type="number" required="required">
-      </div>
-      <br>
-    <button type="submit" onclick="funciones/promedio()" class="btn btn-primary"> Calcular Promedio </button>
-    <button type="submit" onclick="funciones/notalta()" class="btn btn-primary" id="MasAlta"> Mostrar nota mas alta </button>
-  </form>
+      <label for="InputEFSI">Ingresa tu nota de EFSI </label>
+      <input type="text" id="EFSI" name="EFSI" required="required"
+        onkeyup="validarNumero(document.getElementById('EFSI').value, 'EFSI')">
+    </div>
+    <br>
 
+  <button class="btn btn-primary" onclick="promedio()" type="button">Calcular Promedio</button>
+  <button class="btn btn-primary" onclick="notalta()" type="button">Mostrar nota mas alta</button>
+
+<br><br>
+
+  <div class="center">
+      Promedio: <p id="resultado"> </p>
+      Materias con nota más alta: <p id="notalta"> </p>
+  </div>
+
+</form>
 
 </body>
 
